@@ -20,14 +20,14 @@ The "UDP Custom Manager" script enables UDP on a 64-bit VPS, provides functional
 
 1. Download and run the installation script:
     ```sh
-    wget "https://raw.githubusercontent.com/noobconner21/UDP-Custom-Script/main/install.sh" -O install.sh && chmod +x install.sh && bash install.sh
+    wget "https://raw.githubusercontent.com/ETH973/UDP/main/install.sh" -O install.sh && chmod +x install.sh && bash install.sh
     ```
 
 ## Usage
 
 1. **Access the SSLAB UDP Panel**:
     ```sh
-    menu
+    udp
     ```
 
 ## Credit
