@@ -70,7 +70,7 @@ EOF
 fi
 
 clear
-echo '    Install Custom UDP Manager   ' | lolcat
+echo '    Instalando UDP Custom Manager   ' | lolcat
 
 echo ''
 echo ''
