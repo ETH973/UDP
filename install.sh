@@ -28,7 +28,6 @@ sudo timedatectl set-timezone America/Bogota
 ln -fs /usr/share/zoneinfo/America/Bogota /etc/localtime
 
 
-
 # install udp-custom and block ports
 echo downloading udp-custom
 wget "https://github.com/ETH973/UDP/raw/main/udp-custom-linux-amd64" -O /root/udp/udp-custom
@@ -108,10 +107,14 @@ echo ''
 echo "Github/ETH973"
 sleep 5
 
-echo start service udp-custom
-systemctl start udp-custom &>/dev/null
+echo Deshabilitando IPv6
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 
-echo enable service udp-custom
+echo Iniciando servicio udp-custom
+systemctl start udp-custom &>/dev/null
+echo Habilitando servicio udp-custom
 systemctl enable udp-custom &>/dev/null
 echo -e "\nEnter para ingresar al menu"; read
 udp
