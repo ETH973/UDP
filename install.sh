@@ -108,9 +108,9 @@ echo "Github/ETH973"
 sleep 5
 
 echo Deshabilitando IPv6
-sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
-sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
-sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1 &>/dev/null
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1 &>/dev/null
+sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1 &>/dev/null
 
 echo Iniciando servicio udp-custom
 systemctl start udp-custom &>/dev/null
